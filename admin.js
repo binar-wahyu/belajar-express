@@ -11,11 +11,11 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get("/admin/info", (req, res) => {
+router.get("/info", (req, res) => {
   res.send("From Admin Router - Info Page");
 });
 
-router.get("/admin/about", (req, res) => {
+router.get("/about", (req, res) => {
   res.send("From Admin Router - About Page");
 });
 

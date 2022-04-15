@@ -26,7 +26,7 @@ app.get("/order", (req, res) => {
   ]);
 });
 
-app.use(adminRouter);
+app.use("/admin", adminRouter);
 
 app.use((err, req, res, next) => {
   console.error(err);
