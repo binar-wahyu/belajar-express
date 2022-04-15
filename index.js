@@ -1,4 +1,5 @@
 const express = require("express");
+const adminRouter = require("./admin");
 
 const app = express();
 const port = 3000;
@@ -26,6 +27,8 @@ app.get("/order", (req, res) => {
     { id: 3, paid: false, userId: 2 },
   ]);
 });
+
+app.use(adminRouter);
 
 app.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`);
