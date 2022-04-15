@@ -4,10 +4,6 @@ const app = express();
 const port = 3000;
 
 app.use((req, res, next) => {
-  if (req.url === "/order") {
-    return next();
-  }
-
   console.log(`${req.method} ${req.url}`);
   next();
 });
